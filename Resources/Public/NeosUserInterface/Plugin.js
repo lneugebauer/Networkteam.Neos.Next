@@ -12,7 +12,7 @@
   // node_modules/@neos-project/neos-ui-extensibility/dist/index.js
   var dist_default = readFromConsumerApi("manifest");
 
-  // src/manifest.js
+  // Resources/Private/NeosUserInterface/manifest.js
   dist_default("Networkteam.Neos.Next", {}, (globalRegistry) => {
     const serverFeedbackHandlers = globalRegistry.get("serverFeedbackHandlers");
     serverFeedbackHandlers.set("Neos.Neos.Ui:ReloadContentOutOfBand/Main", (feedback, store) => {
