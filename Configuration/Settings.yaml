@@ -23,8 +23,13 @@ Networkteam:
         #   nextBaseUrl: http://my-site.local:3000/
 
 Neos:
-
   Neos:
     fusion:
       autoInclude:
         'Networkteam.Neos.Next': true
+
+    Ui:
+      resources:
+        javascript:
+          'Networkteam.Neos.Next':
+            resource: 'resource://Networkteam.Neos.Next/Public/Plugin/NeosUserInterface/Plugin.js'
