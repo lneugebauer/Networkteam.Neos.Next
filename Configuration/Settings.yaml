@@ -32,4 +32,4 @@ Neos:
       resources:
         javascript:
           'Networkteam.Neos.Next':
-            resource: 'resource://Networkteam.Neos.Next/Public/Plugin/NeosUserInterface/Plugin.js'
+            resource: 'resource://Networkteam.Neos.Next/Public/NeosUserInterface/Plugin.js'
