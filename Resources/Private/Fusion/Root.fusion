@@ -1,4 +1,5 @@
 neosNext {
-  # Path to render a node preview out of band for the Neos UI - it will use a configured Next.js server to generate the preview
+  # Path to render a node preview out of band for the Neos UI. Since the Neos-Ui expects a a working fusion path we don't want to break the funktionality of Neos\Neos\Ui\Domain\Model\Changes\Property::apply() in the case of building the ReloadOutOfBand-Object. So we return just an empty string.
+
   previewNode = ''
 }

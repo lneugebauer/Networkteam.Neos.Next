@@ -8,9 +8,6 @@ const options = {
   bundle: true,
   target: "es2020",
   entryPoints: { "Plugin": "Resources/Private/NeosUserInterface/index.js" },
-  // add this loader mapping,
-  // in case youre "missusing" javascript files as typescript-react files
-  // - eg with `@neos` or `@connect` decorators
   loader: { ".js": "tsx" },
   outdir: "Resources/Public/NeosUserInterface",
   alias: extensibilityMap
