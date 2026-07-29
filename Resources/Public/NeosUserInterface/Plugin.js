@@ -59,11 +59,14 @@
   dist_default("Networkteam.Neos.Next", {}, (globalRegistry) => {
     const serverFeedbackHandlers = globalRegistry.get("serverFeedbackHandlers");
     serverFeedbackHandlers.set("Neos.Neos.Ui:ReloadContentOutOfBand/Main", (feedback, { store, globalRegistry: globalRegistry2 }) => {
-      console.log("stuff dispatched");
       const guestFrame = document.getElementsByName("neos-content-main")[0];
       const reloadOutOfBandEvent = new Event("Networkteam.Neos.Next:ReloadOutOfBand");
       guestFrame.contentWindow.dispatchEvent(reloadOutOfBandEvent);
-      debugger;
+    });
+    serverFeedbackHandlers.set("Neos.Neos.Ui:RenderContentOutOfBand/Main", (feedback, { store, globalRegistry: globalRegistry2 }) => {
+      const guestFrame = document.getElementsByName("neos-content-main")[0];
+      const renderOutOfBandEvent = new Event("Networkteam.Neos.Next:RenderContentOutOfBand");
+      guestFrame.contentWindow.dispatchEvent(renderOutOfBandEvent);
     });
     serverFeedbackHandlers.set("Neos.Neos.Ui:UpdateNodeInfo/Main", (feedbackPayload, { store }) => {
       const state = store.getState();
